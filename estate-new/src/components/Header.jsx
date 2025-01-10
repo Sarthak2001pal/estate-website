@@ -10,7 +10,7 @@ export default function Header() {
             <span className='text-slate-500'>Pal</span>
             <span className='text-slate-700'>Estates</span>
         </h1>
-        </Link>
+        </Link> 
         <form className='bg-slate-100 p-3 rounded-lg flex items-center
         '> 
           <input 
@@ -22,7 +22,7 @@ export default function Header() {
           <Link to='/'>
           <li className='hidden sm:inline text-slate-700 hover:underline'>Home</li>
           </Link>
-          
+
           <Link to='/about'>
           <li className='hidden sm:inline text-slate-700 hover:underline'>About</li>
           </Link>
