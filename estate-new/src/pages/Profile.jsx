@@ -175,7 +175,7 @@ export default function Profile() {
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input  onChange={(e)=>setFile(e.target.files[0])} type="file" ref={fileref} hidden/>
-        <img onClick={()=>fileref.current.click()} src={ profileImage} alt="Profile" className='rounded-full h-24 w-24 object-cover cursor-pointer self-center' />
+        <img onClick={()=> fileRef.current.click()} src={profileImage} alt="Profile" className="rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2 transition-transform duration-300 hover:scale-105" />
         <p className="text-sm self-center">
           {
             fileUploadError ? (
@@ -239,7 +239,9 @@ export default function Profile() {
   
               <div className='flex flex-col item-center'>
               <button onClick={() => handleListingDelete(listing._id)}className='text-red-700 uppercase'>Delete</button>
-                <button className='text-green-700 uppercase'>Edit</button>
+              <Link to={`/update-listing/${listing._id}`}>
+                <button className="text-green-700 uppercase">Edit</button>
+              </Link>
               </div>
             </div>
           ))}
